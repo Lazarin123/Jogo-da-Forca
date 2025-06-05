@@ -50,7 +50,7 @@ int main () {
         }
         printf("\n");
 
-        chuta(chutes, *tentativas);
+        chuta(chutes, &tentativas);
 
     } while (!acertou && !enforcou);
 
