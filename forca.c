@@ -43,10 +43,12 @@ void desenhaforca (char secretword[20], char chutes[26], int tentativas) {
 
 }
 
+void palavra (char secretword[20]) {
+    sprintf(secretword, "MELANCIA");
+}
+
 int main () {
     char secretword[20];
-    
-    sprintf(secretword, "MELANCIA");
 
     int acertou = 0;
     int enforcou = 0;
@@ -54,6 +56,7 @@ int main () {
     char chutes[26];
     int tentativas = 0;
 
+    palavra(secretword);
     abertura ();
 
     do {
