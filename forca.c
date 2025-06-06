@@ -27,6 +27,22 @@ int jachutou (char letra, char chutes[26], int tentativas) {
     return achou;
 }
 
+void desenhaforca (char secretword[20], char chutes[26], int tentativas) {
+    for(int i = 0; i < strlen(secretword); i++) {
+
+            int achou = jachutou(secretword[i], chutes, tentativas);
+
+            if (achou) {
+                printf("%c ", secretword[i]);
+            } else {
+            printf("_ ");
+            }
+
+        }
+        printf("\n");
+
+}
+
 int main () {
     char secretword[20];
     
@@ -42,18 +58,7 @@ int main () {
 
     do {
 
-        for(int i = 0; i < strlen(secretword); i++) {
-
-            int achou = jachutou(secretword[i], chutes, tentativas);
-
-            if (achou) {
-                printf("%c ", secretword[i]);
-            } else {
-            printf("_ ");
-            }
-
-        }
-        printf("\n");
+        desenhaforca(secretword, chutes, tentativas);   
 
         chuta(chutes, &tentativas);
 
