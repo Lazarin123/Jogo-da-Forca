@@ -51,6 +51,25 @@ void palavrasecreta () {
     sprintf(secretword, "MELANCIA");
 }
 
+int enforcou () {
+    int erros = 0;
+
+    for (int i = 0; i < tentativas; i++){
+        int existe = 0;
+
+        for (int j = 0; j < strlen(secretword); j++) {
+            if (chutes[i] == secretword[j]) {
+                existe = 1;
+                break;
+            }   
+        } 
+        if (!existe) erros++;
+    }
+
+    return erros >= 5;
+
+}
+
 int main () {
     
     int acertou = 0;
