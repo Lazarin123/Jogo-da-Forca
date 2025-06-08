@@ -73,7 +73,6 @@ int enforcou () {
 int main () {
     
     int acertou = 0;
-    int enforcou = 0;
 
     palavrasecreta(secretword);
     abertura ();
@@ -81,9 +80,8 @@ int main () {
     do {
 
         desenhaforca(secretword, chutes, tentativas);   
-
         chuta(chutes, &tentativas);
 
-    } while (!acertou && !enforcou);
+    } while (!acertou && !enforcou());
 
 }
