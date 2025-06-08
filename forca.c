@@ -3,7 +3,7 @@
 
 char secretword[20];
 char chutes[26];
-int tentativas = 0;
+int chutesdados = 0;
 
 void abertura () {
     printf("***********************\n");
@@ -15,14 +15,14 @@ void chuta() {
     char chute;
     scanf(" %c", &chute);
 
-    chutes[tentativas] = chute;
-    tentativas++;
+    chutes[chutesdados] = chute;
+    chutesdados++;
 }
 
 int jachutou (char letra) {
     int achou = 0;
 
-    for (int j = 0; j < tentativas; j++) {
+    for (int j = 0; j < chutesdados; j++) {
         if (chutes[j] == letra) {
             achou = 1;
             break;
@@ -54,7 +54,7 @@ void palavrasecreta () {
 int enforcou () {
     int erros = 0;
 
-    for (int i = 0; i < tentativas; i++){
+    for (int i = 0; i < chutesdados; i++){
         int existe = 0;
 
         for (int j = 0; j < strlen(secretword); j++) {
@@ -79,8 +79,8 @@ int main () {
 
     do {
 
-        desenhaforca(secretword, chutes, tentativas);   
-        chuta(chutes, &tentativas);
+        desenhaforca(secretword, chutes, chutesdados);   
+        chuta(chutes, &chutesdados);
 
     } while (!acertou && !enforcou());
 
