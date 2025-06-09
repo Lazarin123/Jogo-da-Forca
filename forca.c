@@ -51,6 +51,15 @@ void palavrasecreta () {
     sprintf(secretword, "MELANCIA");
 }
 
+int ganhou () {
+    for (int i = 0; i < strlen(secretword); i++){
+        if(!jachutou(secretword[i])) {
+            return 0; 
+        }
+    }
+    return 1;
+}
+
 int enforcou () {
     int erros = 0;
 
@@ -71,8 +80,6 @@ int enforcou () {
 }
 
 int main () {
-    
-    int acertou = 0;
 
     palavrasecreta(secretword);
     abertura ();
@@ -82,6 +89,6 @@ int main () {
         desenhaforca(secretword, chutes, chutesdados);   
         chuta(chutes, &chutesdados);
 
-    } while (!acertou && !enforcou());
+    } while (!acertou() && !enforcou());
 
 }
