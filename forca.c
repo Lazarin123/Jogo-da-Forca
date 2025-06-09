@@ -51,7 +51,7 @@ void palavrasecreta () {
     sprintf(secretword, "MELANCIA");
 }
 
-int ganhou () {
+int acertou () {
     for (int i = 0; i < strlen(secretword); i++){
         if(!jachutou(secretword[i])) {
             return 0; 
