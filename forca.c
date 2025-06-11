@@ -49,7 +49,15 @@ void desenhaforca () {
 }
 
 void palavrasecreta () {
-    sprintf(secretword, "MELANCIA");
+    FILE* f;
+
+   f = fopen("frutas.txt", "r");
+
+   int qtdpalavras;
+   srand(time(0));
+   int randomico = rand() % qtdpalavras;
+
+   fclose(f);
 }
 
 int acertou () {
