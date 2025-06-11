@@ -165,7 +165,7 @@ int main () {
 
     } while (!acertou() && !enforcou());
 
-    if (acertou) {
+    if (acertou()) {
         printf("Parabens, voce acertou a palavra secreta: %s\n", secretword);
 
         printf("       ___________      \n");
