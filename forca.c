@@ -54,6 +54,10 @@ void palavrasecreta () {
     FILE* f;
 
     f = fopen("nomes.txt", "r");
+    if(f == 0) {
+        printf("Desculpe, mas o banco de dados nao esta disponivel.\n\n");
+        exit(1);
+    }
 
     int qtdpalavras;
     fscanf(f, "%d", &qtdpalavras);
