@@ -51,7 +51,7 @@ void desenhaforca () {
 void palavrasecreta () {
     FILE* f;
 
-    f = fopen("frutas.txt", "r");
+    f = fopen("nomes.txt", "r");
 
     int qtdpalavras;
     fscanf(f, "%d", &qtdpalavras);
