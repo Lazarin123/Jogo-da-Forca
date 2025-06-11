@@ -62,7 +62,7 @@ void palavrasecreta () {
     int randomico = rand() % qtdpalavras;
 
     for (int i = 0; i<= randomico; i++) {
-        fscanf(f, "%s", palavrasecreta);
+        fscanf(f, "%s", secretword);
     }
 
     fclose(f);
