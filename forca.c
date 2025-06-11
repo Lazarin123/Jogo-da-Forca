@@ -51,13 +51,19 @@ void desenhaforca () {
 void palavrasecreta () {
     FILE* f;
 
-   f = fopen("frutas.txt", "r");
+    f = fopen("frutas.txt", "r");
 
-   int qtdpalavras;
-   srand(time(0));
-   int randomico = rand() % qtdpalavras;
+    int qtdpalavras;
+    fscanf(f, "%d", &qtdpalavras);
 
-   fclose(f);
+    srand(time(0));
+    int randomico = rand() % qtdpalavras;
+
+    for (int i = 0; i<= randomico; i++) {
+        fscanf(f, "%s", palavrasecreta);
+    }
+
+    fclose(f);
 }
 
 int acertou () {
