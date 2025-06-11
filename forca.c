@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
-void abertura();
-void chuta();
-int jachutou(char letra);
-void desenhaforca();
-void palavrasecreta();
-int acertou();
-int enforcou();
+#include "forca.h"
 
 char secretword[20];
 char chutes[26];
