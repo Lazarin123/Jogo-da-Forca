@@ -1,12 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include "forca.h"
 
-char secretword[TAMANHO_PALAVRA];
-char chutes[26];
-int chutesdados = 0;
 
 void abertura () {
     printf("***********************\n");
